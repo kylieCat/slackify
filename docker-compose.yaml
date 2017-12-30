@@ -1,0 +1,11 @@
+version: "3"
+services:
+  slackify:
+    image: imauld/slackify:0.1.0
+    command: ./slackify
+    environment:
+      - "SPOTIFY_ID=${SPOTIFY_ID}"
+      - "SPOTIFY_SECRET=${SPOTIFY_SECRET}"
+      - "SLACk_TOKEN=${SLACK_TOKEN}"
+    ports:
+      - "8080:8080"
